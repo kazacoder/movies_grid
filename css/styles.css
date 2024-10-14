@@ -21,9 +21,20 @@ body {
     font-size: 0;
 }
 
-.logo {
+.header .container {
+    display: grid;
+    grid-template-columns: 60px 1fr 28px;
+    align-items: center;
+}
+
+.header-logo {
     display: inline-block;
     vertical-align: middle;
+    width: 60px;
+}
+
+.header-logo img {
+    max-width: 100%;
 }
 
 .logo img {
@@ -31,9 +42,7 @@ body {
 }
 
 .menu {
-    margin-left: 187px;
-    display: inline-block;
-    vertical-align: middle;
+    justify-self: center;
 }
 
 .menu ul {
@@ -63,7 +72,6 @@ body {
 .header-search {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 153px;
 }
 
 .header-search:hover {
@@ -74,17 +82,20 @@ body {
     padding: 53px 0 45px 0;
 }
 
-.main-info {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 552px;
+.main .container {
+    display: grid;
+    grid-column-gap: 51px;: ;
+    grid-template-columns: 1fr 1fr;
+    /*grid-template-rows: repeat(4, minmax(min-content, max-content));*/
 }
 
-
 .main-image {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 51px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+}
+
+.main-image img {
+    max-width: 100%;
 }
 
 .main h1 {
@@ -185,16 +196,20 @@ body {
 }
 
 .films-items {
-    font-size: 0;
-    margin-left: -12px;
-    margin-right: -12px;
+    display: grid;
+    gap: 20px 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 384px));
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .films-item {
-    margin: 10px 12px;
-    display: inline-block;
-    vertical-align: middle;
 
+}
+
+.films-items img {
+    max-width: 100%;
 }
 
 .films-item:hover {
@@ -226,7 +241,15 @@ body {
     border-bottom: 2px solid white;
 }
 
+.burger {
+    display: none;
+}
 
-
-
-
+.close {
+    display: none;
+    width: 28px;
+    height: 28px;
+    fill: #BDBDBD;
+    top: 20px;
+    left: 20px;
+}
